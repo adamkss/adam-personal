@@ -1,0 +1,26 @@
+@keyframes FadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeAndSlideInAnimation {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+$general-animation-duration: 1s;
+
+@mixin FadeAndSlideIn($duration: $general-animation-duration) {
+  transform-origin: top left;
+  animation: FadeAndSlideInAnimation $duration ease-out;
+}

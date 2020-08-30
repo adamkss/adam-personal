@@ -1,0 +1,13 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+// This is a flex container so that the text is always vertically centered
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,55 @@
+@use 'styles/animations';
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .header__title {
+    flex-grow: 1;
+    color: #111111;
+    font-size: 2rem;
+  }
+
+  .header__nav {
+  }
+
+  .header__nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+    .nav-list__list-item {
+      position: relative;
+      text-transform: lowercase;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: rgb(117, 112, 112);
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:not(:last-child) {
+        margin-right: 1.2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .nav-list__list-item.nav-list__list-item-active {
+      color: #111111;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 70%;
+        width: 100%;
+        height: 7px;
+        z-index: -1;
+        background-color: #ff5277;
+        @include animations.FadeAndSlideIn(0.6s);
+      }
+    }
+  }
+}
