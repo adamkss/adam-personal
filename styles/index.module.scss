@@ -1,5 +1,7 @@
-.main-wrapper {
-  padding-top: 5em;
+@import "styles/colors";
+
+.introduction {
+  padding-top: 7vw;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas:
@@ -12,39 +14,84 @@
     grid-template-columns: auto auto;
     grid-template-areas: "profile-picture welcome-text";
   }
-}
 
-.profile-image {
-  grid-area: profile-picture;
-  width: calc(5rem + 5vw);
-  min-width: 150px;
-  border-radius: 50%;
-  padding: 1em;
-}
-
-.welcome-text {
-  grid-area: welcome-text;
-  padding: 1em;
-
-  .welcome__big-text {
-    position: relative;
-    display: block;
-    font-size: 4rem;
-    font-weight: 800;
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 30%;
-      background-color: #96f5cd;
-      bottom: 8px;
-      z-index: -1;
-      border-top-right-radius: 0.3rem;
-      border-bottom-right-radius: 0.3rem;
-    }
+  .profile-image {
+    grid-area: profile-picture;
+    width: calc(5rem + 5vw);
+    min-width: 150px;
+    border-radius: 50%;
+    padding: 1em;
   }
-  .welcome__small-text {
-    font-size: 1.5rem;
+
+  .welcome-text {
+    grid-area: welcome-text;
+    padding: 1em;
+
+    .welcome__big-text {
+      position: relative;
+      display: block;
+      font-size: 4rem;
+      font-weight: 800;
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        background-color: $neon-green;
+        bottom: 8px;
+        z-index: -1;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
+        transition: all 0.3s ease-in;
+        transform-origin: bottom left;
+      }
+      &:hover::after {
+        background-color: $cool-pinkish;
+        transform: scaleY(1.7);
+      }
+    }
+    .welcome__small-text {
+      display: block;
+      margin-top: 0.8rem;
+      font-size: 1.5rem;
+    }
+
+    .welcome__newsletter {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: calc(7vw + 2vh);
+      font-size: 1.5rem;
+      text-align: end;
+      color: #111111;
+      & span {
+        display: block;
+        font-weight: 300;
+      }
+
+      & strong {
+        font-weight: 800;
+        display: inline-block;
+        position: relative;
+        padding: 0em 0.5rem;
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: lighten($cool-pinkish, 13%);
+          z-index: -1;
+          transform: scale(1.1);
+          clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0 100%);
+          transition: all 0.3s ease-in;
+        }
+        &:hover:after {
+          transform: scale(1.2);
+        }
+      }
+    }
   }
 }

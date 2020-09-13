@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 import styles from 'styles/index.module.scss';
 import { Header } from 'components/header';
@@ -17,33 +18,55 @@ const Home = () => {
           className: 'main-wrapper',
         })}
       >
-        <img
+        <section
           className={getClassNames({
-            className: 'profile-image',
-          })}
-          alt="Profile picture"
-          src="/profile_picture.jpg"
-        />
-        <div
-          className={getClassNames({
-            className: 'welcome-text',
+            className: 'introduction',
           })}
         >
-          <span
+          <img
             className={getClassNames({
-              className: 'welcome__big-text',
+              className: 'profile-image',
+            })}
+            alt="Profile picture"
+            src="/profile_picture.jpg"
+          />
+          <div
+            className={getClassNames({
+              className: 'welcome-text',
             })}
           >
-            Hi there!
-          </span>
-          <span
-            className={getClassNames({
-              className: 'welcome__small-text',
-            })}
-          >
-            Check out my articles until other content pops up here :)
-          </span>
-        </div>
+            <span
+              className={getClassNames({
+                className: 'welcome__big-text',
+              })}
+            >
+              Hi there!
+            </span>
+            <span
+              className={getClassNames({
+                className: 'welcome__small-text',
+              })}
+            >
+              I am a <b>Full Stack</b> Software Engineer who loves to write
+              about cool things.
+            </span>
+            <div
+              className={getClassNames({
+                className: 'welcome__newsletter',
+              })}
+            >
+              <span>
+                If you'd like, you can subscribe to my{' '}
+                <strong>
+                  <Link href="/newsletter">
+                    <a>newsletter</a>
+                  </Link>
+                </strong>
+                .
+              </span>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
