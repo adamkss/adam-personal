@@ -51,9 +51,9 @@ export const Header = ({ currentPage = 'home' }) => {
               }
             )}
           >
-            <Link href="/newsletter">
-              <a>Newsletter</a>
-            </Link>
+            <a href="http://eepurl.com/hdh99j" target="blank">
+              Newsletter
+            </a>
           </li>
         </ul>
       </nav>

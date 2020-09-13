@@ -58,9 +58,9 @@ const Home = () => {
               <span>
                 If you'd like, you can subscribe to my{' '}
                 <strong>
-                  <Link href="/newsletter">
-                    <a>newsletter</a>
-                  </Link>
+                  <a href="http://eepurl.com/hdh99j" target="blank">
+                    newsletter
+                  </a>
                 </strong>
                 .
               </span>
