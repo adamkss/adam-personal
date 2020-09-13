@@ -36,9 +36,9 @@ export const Header = ({ currentPage = 'home' }) => {
               }
             )}
           >
-            <Link href="/about-me">
+            {/* <Link href="/about-me">
               <a>About me</a>
-            </Link>
+            </Link> */}
           </li>
           <li
             className={getClassNames(

@@ -1,3 +1,50 @@
-.wrapper {
-  padding: 2em;
+.main-wrapper {
+  padding-top: 5em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "profile-picture"
+    "welcome-text";
+  justify-content: center;
+  justify-items: center;
+
+  @media (min-width: 550px) {
+    grid-template-columns: auto auto;
+    grid-template-areas: "profile-picture welcome-text";
+  }
+}
+
+.profile-image {
+  grid-area: profile-picture;
+  width: calc(5rem + 5vw);
+  min-width: 150px;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.welcome-text {
+  grid-area: welcome-text;
+  padding: 1em;
+
+  .welcome__big-text {
+    position: relative;
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      background-color: #96f5cd;
+      bottom: 8px;
+      z-index: -1;
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+  }
+  .welcome__small-text {
+    font-size: 1.5rem;
+  }
 }
