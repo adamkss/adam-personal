@@ -25,7 +25,7 @@ export const Header = ({ currentPage = 'home' }) => {
               <a>Home</a>
             </Link>
           </li>
-          <li
+          {/* <li
             className={getClassNames(
               {
                 className: 'nav-list__list-item',
@@ -39,7 +39,7 @@ export const Header = ({ currentPage = 'home' }) => {
             <Link href="/articles">
               <a>Articles</a>
             </Link>
-          </li>
+          </li> */}
           <li
             className={getClassNames(
               {
