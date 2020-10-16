@@ -13,6 +13,41 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Adam Kiss | Personal</title>
+
+        {/* Classical meta tags */}
+        <meta
+          name="description"
+          content="Adam Kiss's Personal Website - Full Stack Software Engineer - Blog, Newsletter, Portfolio."
+        />
+        <meta
+          name="keywords"
+          content="Software Developer, Full Stack Sotfware Engineer, Blog, Newsletter, Programming, Portfolio"
+        />
+
+        {/* Social media meta tags */}
+        <meta property="og:title" content="Adam Kiss - Personal Website" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Full Stack Software Engineer - Blog, Newsletter, Portfolio"
+        />
+        <meta
+          property="og:image"
+          content="https://adamkiss.net/images/profile-social-media.jpg"
+        />
+        <meta property="og:url" content="https://adamkiss.net" />
+        <meta name="twitter:title" content="Adam Kiss - Personal Website" />
+        <meta
+          name="twitter:description"
+          content="Full Stack Software Engineer - Blog, Newsletter, Portfolio"
+        />
+        <meta
+          name="twitter:image"
+          content="https://adamkiss.net/images/profile-social-media.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        {/* Links, preloads */}
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com/"
