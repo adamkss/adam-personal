@@ -23,13 +23,33 @@ const Home = () => {
             className: 'introduction',
           })}
         >
-          <img
-            className={getClassNames({
-              className: 'profile-image',
-            })}
-            alt="Profile picture"
-            src="/profile_picture.jpg"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/images/profile-w_360.webp 1x, 
+                      /images/profile-w_518.webp 1.5x,
+                      /images/profile-w_650.webp 1.8x,
+                      /images/profile-w_769.webp 2x,
+                      /images/profile-w_865.webp 2.5x,
+                      /images/profile-w_960.webp 3x"
+            ></source>
+            <source
+              type="image/jpeg"
+              srcSet="/images/profile-w_360.jpg 1x, 
+                      /images/profile-w_518.jpg 1.5x,
+                      /images/profile-w_650.jpg 1.8x,
+                      /images/profile-w_769.jpg 2x,
+                      /images/profile-w_865.jpg 2.5x,
+                      /images/profile-w_960.jpg 3x"
+            ></source>
+            <img
+              className={getClassNames({
+                className: 'profile-image',
+              })}
+              alt="Profile picture"
+              src="/images/profile-w_650.jpg"
+            />
+          </picture>
           <div
             className={getClassNames({
               className: 'welcome-text',
