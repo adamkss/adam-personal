@@ -25,21 +25,21 @@ export const Header = ({ currentPage = 'home' }) => {
               <a>Home</a>
             </Link>
           </li>
-          {/* <li
+          <li
             className={getClassNames(
               {
                 className: 'nav-list__list-item',
               },
               {
                 className: 'nav-list__list-item-active',
-                if: currentPage === 'articles',
+                if: currentPage === 'blog',
               }
             )}
           >
-            <Link href="/articles">
-              <a>Articles</a>
+            <Link href="/blog">
+              <a>Blog</a>
             </Link>
-          </li> */}
+          </li>
           <li
             className={getClassNames(
               {
