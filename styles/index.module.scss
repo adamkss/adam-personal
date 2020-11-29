@@ -95,3 +95,16 @@
     }
   }
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  gap: max(2vw, 20px);
+
+  > svg {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+  }
+}

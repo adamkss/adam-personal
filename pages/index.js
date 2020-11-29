@@ -2,11 +2,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from 'styles/index.module.scss';
+
 import { Header } from 'components/header';
 import { ClassNameHelper } from 'utils/ClassNameHelper';
+import VerticalSpacer from 'components/atoms/VerticalSpacer';
+
+import LinkedIn from 'illustrations/LinkedIn';
+import Instagram from 'illustrations/Instagram';
+import Medium from 'illustrations/Medium';
 
 const { getClassNames } = new ClassNameHelper(styles);
 
+const IconsColor = 'rgba(0,0,0,0.4)';
 const Home = () => {
   return (
     <>
@@ -86,6 +93,34 @@ const Home = () => {
               </span>
             </div>
           </div>
+        </section>
+        <VerticalSpacer space="3rem" />
+        <section
+          className={getClassNames({
+            className: 'contact',
+          })}
+        >
+          <a
+            href="https://www.linkedin.com/in/adam-kiss-270437109/"
+            title="LinkedIn"
+            target="blank"
+          >
+            <LinkedIn />
+          </a>
+          <a
+            href="https://www.instagram.com/adams.work/"
+            title="Instagram"
+            target="blank"
+          >
+            <Instagram />
+          </a>
+          <a
+            href="https://medium.com/@kiss.adam.a"
+            title="Medium"
+            target="blank"
+          >
+            <Medium />
+          </a>
         </section>
       </main>
     </>
